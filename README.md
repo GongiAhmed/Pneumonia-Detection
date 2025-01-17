@@ -8,7 +8,7 @@ This notebook demonstrates a pneumonia detection system using a TensorFlow/Keras
 
 The notebook performs the following steps:
 
-1. **Data Loading and Preprocessing:** Loads the training labels from `stage_2_train_labels.csv` and the DICOM images from `stage_2_train_images`.  Images are preprocessed by resizing and padding to a fixed size (244x244) and normalized. Bounding box coordinates are also normalized.
+1. **Data Loading and Preprocessing:** Loads the training labels from "https://www.kaggle.com/competitions/rsna-pneumonia-detection-challenge/data" and the DICOM images from `stage_2_train_images`.  Images are preprocessed by resizing and padding to a fixed size (244x244) and normalized. Bounding box coordinates are also normalized.
 2. **Data Formatting:**  A custom function `format_image` handles the resizing and padding, while `format_instance` converts labels to one-hot encoding for classification and scales bounding box coordinates.
 3. **Dataset Creation and Tuning:** TensorFlow `tf.data` is used to create training, validation, and test datasets. Performance optimizations like `map` with `num_parallel_calls`, `shuffle`, `repeat`, `batch`, and `prefetch` are applied.
 4. **Model Building:** A multi-output convolutional neural network is constructed. It consists of:
